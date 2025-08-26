@@ -1,0 +1,3 @@
+D:/GitHubRepositorio/1INF32/cap01 backtracking/NReinas_vaz/cmake-build-debug/CMakeFiles/NReinas.dir
+D:/GitHubRepositorio/1INF32/cap01 backtracking/NReinas_vaz/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/GitHubRepositorio/1INF32/cap01 backtracking/NReinas_vaz/cmake-build-debug/CMakeFiles/rebuild_cache.dir

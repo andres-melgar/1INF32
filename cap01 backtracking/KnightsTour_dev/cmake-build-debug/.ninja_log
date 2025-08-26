@@ -1,0 +1,8 @@
+# ninja log v6
+12	1047	7779280671543771	CMakeFiles/KnightsTour.dir/main.cpp.obj	c7e7fa3aa53961f4
+1297	1616	7779280684393514	KnightsTour.exe	c66370d25d692308
+19	1297	7779280671625894	CMakeFiles/KnightsTour.dir/KnigthsTour.cpp.obj	285bd934b7891ce5
+13	976	7779284180861275	build.ninja	3eebf02d81232c70
+55	1553	7779284213491700	CMakeFiles/KnightsTour.dir/main.cpp.obj	ef13e8d84e30d030
+77	1881	7779284213711709	CMakeFiles/KnightsTour.dir/KnigthsTour.cpp.obj	aa0e2d5c7bbf2041
+1881	2322	7779284231763520	KnightsTour.exe	c66370d25d692308
