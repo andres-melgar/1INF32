@@ -31,12 +31,24 @@ void KnigthsTour::setInicio(int x0, int y0) {
 }
 
 bool KnigthsTour::es_movimiento_valido(int x, int y) {
-    //TODO
-    return false;
+    return x>=0 && y>=0 && x<this->tamaño && y<this->tamaño &&
+        this->tablero[x][y] == CELDA_VACIA;
 }
 
 bool KnigthsTour::encontrar_solucion(int i, int x, int y) {
-    //TODO
+    if (i == this->tamaño * tamaño + 1)
+        return true;
+    for (const auto&[dx,dy]: this->lista_movimientos) {
+        int nuevo_x = x + dx;
+        int nuevo_y = y + dy;
+        if (this->es_movimiento_valido(nuevo_x, nuevo_y)) {
+            this->tablero[nuevo_x][nuevo_y] = i;
+            if (encontrar_solucion(i+1, nuevo_x, nuevo_y))
+                return true;
+            else
+                this->tablero[nuevo_x][nuevo_y] = CELDA_VACIA;
+        }
+    }
     return false;
 }
 
