@@ -28,7 +28,7 @@ void NReinas::mostrar_soluciones() {
     int columna_inicial = 0;
     int cantidad_soluciones = 0;
     encontrar_solucion(columna_inicial, cantidad_soluciones);
-    cout << "Hay" << cantidad_soluciones << " soluciones" << endl;
+    cout << "Hay " << cantidad_soluciones << " soluciones" << endl;
 }
 
 bool NReinas::encontrar_solucion(int columna, int &cantidad_soluciones) {
@@ -62,7 +62,7 @@ bool NReinas::es_movimiento_valido(int fila, int columna) {
             return false;
 
     //valido que no haya reina en la diagonal inferior izquierda
-    for (int i = columna - 1, j = fila + 1; i >= 0 && j >= 0; i--, j++)
+    for (int i = columna - 1, j = fila + 1; i >= 0 && j < this->tamaño; i--, j++)
         if (this->tablero[j][i] == CELDA_LLENA)
             return false;
     return true;
