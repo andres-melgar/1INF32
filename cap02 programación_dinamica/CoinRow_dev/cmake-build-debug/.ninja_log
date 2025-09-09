@@ -1,0 +1,9 @@
+# ninja log v6
+27	1083	7779540443594838	CMakeFiles/CoinRow.dir/CoinRow.cpp.obj	bc7e5b687daa3bff
+15	995	7779540443483285	CMakeFiles/CoinRow.dir/main.cpp.obj	1f8a9a26ad0d440a
+1083	1419	7779540454164101	CoinRow.exe	f37e7fa185e23f35
+17	1106	7791454089446768	CMakeFiles/CoinRow.dir/main.cpp.obj	8f7b5beb6c2c05e2
+27	1239	7791454089558979	CMakeFiles/CoinRow.dir/CoinRow.cpp.obj	cfed87e0ce5819a3
+1239	1567	7791454101673794	CoinRow.exe	f37e7fa185e23f35
+7	643	7791457100146334	CMakeFiles/CoinRow.dir/CoinRow.cpp.obj	cfed87e0ce5819a3
+643	885	7791457106498863	CoinRow.exe	f37e7fa185e23f35
