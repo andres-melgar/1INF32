@@ -1,0 +1,7 @@
+# ninja log v6
+20	1417	7757798112370000	CMakeFiles/Dijkstra.dir/Grafo.cpp.obj	6e30ca4ec898f14e
+18	966	7757795664090000	CMakeFiles/Dijkstra.dir/main.cpp.obj	9b295804bd361259
+1421	1881	7757798126390000	Dijkstra.exe	2f720061f518e76a
+8	577	7797549031847364	CMakeFiles/Dijkstra.dir/main.cpp.obj	e418f50408b90c1d
+13	775	7797549031887362	CMakeFiles/Dijkstra.dir/Grafo.cpp.obj	7aaa0bf5136a9c28
+775	895	7797549039510224	Dijkstra.exe	e4d9d432760a4c85

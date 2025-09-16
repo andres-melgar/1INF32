@@ -1,0 +1,9 @@
+# ninja log v6
+71	1334	7797430072900000	CMakeFiles/ActivitySelection.dir/main.cpp.obj	9d295c785521795a
+94	1482	7797430073160000	CMakeFiles/ActivitySelection.dir/ActivitySelection.cpp.obj	b84f1dfeaf4af9af
+1491	2763	7797430087120000	ActivitySelection.exe	34667a16d13b5cc8
+9	503	7797536974200970	CMakeFiles/ActivitySelection.dir/main.cpp.obj	f96debd2a95799cf
+14	625	7797536974252886	CMakeFiles/ActivitySelection.dir/ActivitySelection.cpp.obj	104032205d1788d9
+625	728	7797536980358270	ActivitySelection.exe	34667a16d13b5cc8
+9	604	7797537059189710	CMakeFiles/ActivitySelection.dir/ActivitySelection.cpp.obj	104032205d1788d9
+605	704	7797537065145193	ActivitySelection.exe	34667a16d13b5cc8

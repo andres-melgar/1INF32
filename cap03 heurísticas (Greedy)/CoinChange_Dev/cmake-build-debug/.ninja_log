@@ -1,0 +1,9 @@
+# ninja log v6
+17	625	7757701992030000	CMakeFiles/CoinChange.dir/main.cpp.obj	41d9201d1c5648d
+17	779	7757702795440000	CMakeFiles/CoinChange.dir/CoinChange.cpp.obj	dd8ea0fe123e45d9
+783	1847	7757702803110000	CoinChange.exe	ae8f003eb254a14a
+11	542	7797519203402993	CMakeFiles/CoinChange.dir/main.cpp.obj	e070a432ba92a883
+16	676	7797519203454011	CMakeFiles/CoinChange.dir/CoinChange.cpp.obj	4f6284e723cbfe9e
+676	793	7797519210059339	CoinChange.exe	9dfbd957a571d0ae
+8	591	7797519480492415	CMakeFiles/CoinChange.dir/CoinChange.cpp.obj	4f6284e723cbfe9e
+591	695	7797519486328145	CoinChange.exe	9dfbd957a571d0ae
