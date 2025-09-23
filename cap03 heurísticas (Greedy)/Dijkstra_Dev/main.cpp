@@ -46,9 +46,8 @@ int main() {
 
     g.imprime_grafo();
 
-    /*int origen = 0, final = 4;
+    int origen = 0, final = 4;
     g.dijkstra(origen);
     g.imprime_ruta_mas_corta(final);
-    */
     return 0;
 }

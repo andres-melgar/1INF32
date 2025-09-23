@@ -27,7 +27,7 @@ void Grafo::imprime_costo(const vector<int> &costo) {
     cout << "] ";
 }
 
-void Grafo::imprime_visitados(const priority_queue<pair<int, int>, vector<pair<int, int> >, greater<> > &visitados) {
+void Grafo::imprime_por_visitar(const priority_queue<pair<int, int>, vector<pair<int, int> >, greater<> > &visitados) {
     cout << "{";
     auto copia = visitados;
     bool mostrar_coma = false;
@@ -44,7 +44,7 @@ void Grafo::imprime_visitados(const priority_queue<pair<int, int>, vector<pair<i
     cout << " }" << endl;
 }
 
-void Grafo::imprime_distancias_mininas(int origen, const vector<int> &costo) {
+void Grafo::imprime_distancias_minimas(int origen, const vector<int> &costo) {
     cout << "Distancias mínimas desde el nodo " << char('A'+origen) << endl;
     for (int i = 0; i < this->numero_vertices; ++i) {
         cout << "Nodo " << char('A' + i) << ": " << costo[i] << " | Camino: ";
@@ -54,7 +54,33 @@ void Grafo::imprime_distancias_mininas(int origen, const vector<int> &costo) {
 }
 
 void Grafo::dijkstra(int origen) {
+    cout << "Algoritmo Dijkstra: " << endl;
+    vector<int> costo(this->numero_vertices, numeric_limits<int>::max());
+    this->ruta.resize(this->numero_vertices, -1);
+    priority_queue<pair<int, int>, vector<pair<int,int>>, greater<> > por_visitar;
 
+    costo[origen] = 0;
+    por_visitar.emplace(0, origen);
+
+    while (!por_visitar.empty()){
+        int distancia_actual = por_visitar.top().first;
+        int u = por_visitar.top().second;
+        por_visitar.pop();
+
+        this->imprime_costo(costo);
+        cout << "COLA: " << u << "}";
+        this->imprime_por_visitar(por_visitar);
+        if (distancia_actual>costo[u])
+            continue;
+        for(auto &[v,peso]: this->lista_adyacencia[u]){
+            if (costo[u] + peso < costo[v]){
+                costo[v] = costo[u] + peso;
+                this->ruta[v] = u;
+                por_visitar.emplace(costo[v], v);
+            }
+        }
+    }
+    this->imprime_distancias_minimas(origen, costo);
 }
 
 void Grafo::imprime_grafo() {

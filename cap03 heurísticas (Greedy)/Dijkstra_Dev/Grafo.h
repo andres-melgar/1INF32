@@ -28,9 +28,9 @@ private:
 
     void imprime_costo(const vector<int> & costo);
 
-    void imprime_visitados(const priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> & visitados);
+    void imprime_por_visitar(const priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> & visitados);
 
-    void imprime_distancias_mininas(int origen, const vector<int> & costo);
+    void imprime_distancias_minimas(int origen, const vector<int> & costo);
 };
 
 
