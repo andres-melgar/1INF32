@@ -30,6 +30,16 @@ public:
     void GRASP();
 private:
     void resetar_solucion_final();
+
+    SolucionCandidata construir(mt19937_64 rng);
+
+    vector<int> construir_candidatos_no_elegidos(int n);
+
+    vector<int> construir_candidatos_factibles(const SolucionCandidata & solucionCandidata, const vector<int> &no_elegidos);
+
+    void mejorar(SolucionCandidata &solucionCandidata);
+
+    void retornar();
 };
 
 

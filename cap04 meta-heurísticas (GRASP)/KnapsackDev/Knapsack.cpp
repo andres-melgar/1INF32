@@ -21,6 +21,52 @@ Knapsack::Knapsack(const vector<Articulo> &articulos, long long capacidad, doubl
 }
 
 void Knapsack::GRASP() {
+    mt19937_64 rng(random_device{}());
+    for (int i=0; i< this->iteraciones; i++) {
+        SolucionCandidata solucionCandidata = construir(rng);
+        mejorar(solucionCandidata);
+    }
+    retornar();
+}
+
+SolucionCandidata Knapsack::construir(mt19937_64 rng) {
+    int n = this->articulos.size();
+    SolucionCandidata solucionCandidata(n);
+    vector<int> no_elegidos = this->construir_candidatos_no_elegidos(n);
+
+    while (true) {
+        vector<int> candidatos = this->construir_candidatos_factibles(solucionCandidata, no_elegidos);
+        if (candidatos.empty()) {
+            break;
+        }
+    }
+    return solucionCandidata;
+}
+
+vector<int> Knapsack::construir_candidatos_no_elegidos(int n) {
+    vector<int> no_elegidos(n);
+    //no_elegidos tiene [0..n[
+    iota(no_elegidos.begin(), no_elegidos.end(), 0);
+    return no_elegidos;
+}
+
+vector<int> Knapsack::construir_candidatos_factibles(const SolucionCandidata &solucionCandidata,
+    const vector<int> &no_elegidos) {
+    vector<int> candidatos;
+    candidatos.resize(no_elegidos.size());
+    for (int id: no_elegidos) {
+        if (solucionCandidata.get_peso()+this->articulos[id].get_peso() <= this->capacidad) {
+            candidatos.push_back(id);
+        }
+    }
+    return candidatos;
+}
+
+void Knapsack::mejorar(SolucionCandidata &solucionCandidata) {
+
+}
+
+void Knapsack::retornar() {
 
 }
 
