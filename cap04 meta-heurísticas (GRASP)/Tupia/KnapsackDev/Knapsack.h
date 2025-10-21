@@ -30,7 +30,28 @@ public:
     void GRASP();
 private:
     void resetar_solucion_final();
-};
 
+    SolucionCandidata construir(mt19937_64 rng);
+
+    vector<int> construir_candidatos_no_elegidos(int n);
+
+    vector<int> construir_candidatos_factibles(const SolucionCandidata &solucionCandidata, const vector<int> &no_elegidos);
+
+    vector<pair<double, int>> construir_puntajes_de_candidatos(const vector<int> &candidatos, double &smin, double &smax);
+
+    vector<pair<double, int>> formacion_de_la_RCL(const vector<pair<double, int>> &puntajes, double smin, double smax);
+
+    void formacion_de_la_RCL_por_umbral(vector<pair<double, int>> &RCL, const vector<pair<double, int>> &puntajes, double smin, double smax);
+
+    void formacion_de_la_RCL_por_cardinalidad(vector<pair<double, int>> &RCL);
+
+    int eleccion_de_item_aleatorio(const vector<pair<double, int>> &RCL, mt19937_64 rng);
+
+    void retirar_elegido_de_los_no_elegidos(int elegido, vector<int> & vector);
+
+    void mejorar(SolucionCandidata &solucionCandidata);
+
+    void retornar();
+};
 
 #endif //KNAPSACK_KNAPSACK_H
