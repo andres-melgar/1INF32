@@ -19,6 +19,9 @@ public:
     AlgoritmoGenetico(int num_generaciones, double tasa_mutacion, int num_maquinas);
 
     Programacion ejecutar(int tamaño_poblacion);
+
+    void set_trabajos(vector<Trabajo> trabajos);
+
 private:
     void generar_poblacion_inicial(int tamaño_poblacion);
 

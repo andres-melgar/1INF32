@@ -1,16 +1,23 @@
 #include <iostream>
+#include <vector>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "AlgoritmoGenetico.h"
+#include "Trabajo.h"
+
+using namespace std;
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    srand(time(nullptr));
+    vector <Trabajo> trabajos = {
+        Trabajo(1,4), Trabajo(2,3),
+        Trabajo(3,2), Trabajo(4,6)
+    };
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
-
+    int num_maquinas = 2;
+    AlgoritmoGenetico ag(1000, 0.05, num_maquinas);
+    ag.set_trabajos(trabajos);
+    int poblacion_inicial = 100;
+    Programacion cromosoma = ag.ejecutar(poblacion_inicial);
+    cromosoma.mostrar_programacion(trabajos);
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }

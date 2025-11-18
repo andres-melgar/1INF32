@@ -34,6 +34,10 @@ Programacion AlgoritmoGenetico::ejecutar(int tamaño_poblacion) {
     return mejor_solucion;
 }
 
+void AlgoritmoGenetico::set_trabajos(vector<Trabajo> trabajos) {
+    this->trabajos = trabajos;
+}
+
 void AlgoritmoGenetico::generar_poblacion_inicial(int tamaño_poblacion) {
     this->poblacion.clear();
     for (int i=0; i<tamaño_poblacion; i++) {
